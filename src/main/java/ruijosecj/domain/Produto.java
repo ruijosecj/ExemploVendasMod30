@@ -26,6 +26,9 @@ public class Produto implements Persistente {
 	@ColunaTabela(dbName = "descricao", setJavaName = "setDescricao")
 	private String descricao;
 	
+	@ColunaTabela(dbName = "peso_produto", setJavaName = "setPesoProduto")
+	private int pesoProduto;
+	
 	@ColunaTabela(dbName = "valor", setJavaName = "setValor")
 	private BigDecimal valor;
 
@@ -67,6 +70,14 @@ public class Produto implements Persistente {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public int getPesoProduto() {
+		return pesoProduto;
+	}
+
+	public void setPesoProduto(int pesoProduto) {
+		this.pesoProduto = pesoProduto;
 	}
 	
 }
